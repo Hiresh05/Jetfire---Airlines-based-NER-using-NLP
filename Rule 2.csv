@@ -1,0 +1,13 @@
+Rule 2 (BAH - KWI),,,,,,,,,,,,
+Function,Logical,Condition,Penalty,Ticket Type,Class,Fare Basis,Include,Brand Type,Provisions,Amount/Percentage, Value,CCY
+Changes [Reservation], Before,Departure,-,-,-,,CHD,-,-,Amount,60,USD
+Changes [Date/Flight],Before ,Departure,Highest Fare Component,-,-,,-,-,-,-,-,BHD
+Reissue,Before ,Departure,-,-,Same,"Lower,Equal,Higher",-,-,"Old , New",Amount,16,BHD
+Reissue,Before ,Departure,-,-,Different,"Equal, Higher",,,New,Amount,16,BHD
+Reissue/Revalidation,Before ,Departure,-,-,-,-,-,"Except Flex, Standard",-,-,-,-
+ No Show,Before ,Departure,No Refund,-,-,-,-,-,-,-,-,-
+No Show ,After,Departure,-,-,-,-,CHD,,,Amount,60,USD
+New Reservation,After ,Departure,Applicable,-,Same,"Lower,Equal,Higher",-,-,"Old , New",Amount,16,BHD
+New Reservation,After ,Departure,Applicable,-,Different,"Equal, Higher",-,-,New,Amount,16,BHD
+Cancellation,N/A,Anytime,No Refund,Non Refundable,-,-,,-,-,Amount,16,BHD
+Cancellation,N/A,Anytime,Refund with penalty applied,Refundable,-,-,-,-,-,Amount,(Decided after penalty),BHD
